@@ -1,0 +1,48 @@
+{
+  "options": {
+    "ver": "1.0.0",
+    "inspectConflicts": false,
+    "semicolons": true,
+    "freeze": [],
+    "ts": false
+  },
+  "app": {
+    "environmentsAllowingSeedData": "yes",
+    "seedData": true,
+    "name": "testgraph",
+    "description": "Project testgraph",
+    "src": "src",
+    "packager": "npm@>= 3.0.0",
+    "providers": [
+      "rest",
+      "socketio"
+    ]
+  },
+  "services": {
+    "databuku": {
+      "name": "databuku",
+      "nameSingular": "databuku",
+      "subFolder": "",
+      "fileName": "databuku",
+      "adapter": "mongoose",
+      "path": "/databuku",
+      "isAuthEntity": false,
+      "graphql": true
+    }
+  },
+  "hooks": {},
+  "connections": {
+    "mongoose": {
+      "database": "mongodb",
+      "adapter": "mongoose",
+      "connectionString": "mongodb://localhost:27017/testgraph"
+    }
+  },
+  "graphql": {
+    "path": "/graphql",
+    "strategy": "batchloaders",
+    "sqlInterface": null,
+    "requiresAuth": false,
+    "name": "graphql"
+  }
+}
