@@ -5,12 +5,23 @@
 
 let moduleExports = `
 type Databuku {
-  id:ID
-  name:String!
+  _id:ID!
+  nama:String!
+  penerbit:String!
 }
+ 
+type User {
+  id:ID!
+  username:String!
+  password:String!
+}
+ 
+
 type Query {
   getDatabuku(key: JSON, query: JSON, params: JSON): Databuku
   findDatabuku(query: JSON, params: JSON): [Databuku]!
+  getUser(key: JSON, query: JSON, params: JSON): User
+  findUser(query: JSON, params: JSON): [User]!
 }
 `;
 

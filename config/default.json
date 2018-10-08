@@ -11,5 +11,29 @@
       "yes"
     ]
   },
-  "mongodb": "mongodb://localhost:27017/testgraph"
+  "mongodb": "mongodb://localhost:27017/testgraph",
+  "authentication": {
+    "secret": "ef4de89a994785d7a71832bea74cb1681a56fd269174e6f813770c1781a0dc9a9cee3c146cd77be94d0b48c70a363d42abda20d451e8e0af908cbb4f5e80083c1e1924c468f7ec8db20e0c888c8170b7c9e2f4a05e6aecbfcd4bd61fb2cc3035a7f893a508a83d83af61abcb75203c93d605af5b0d901ed2778393df1b3fbf08d48955498a658f5d3298078205da927cbfd6ddcf10e757bddb3d5a82b6936d2ec25bc44c9c764869df1ca584a51dd112f5587bb3c7a9f2a8bc1b54386325969d3ef7cda1b02341da002ba06b6c57966b25dd16c556f9210e84d8a4ab1ac8b5ac08362b3e7a03c2978c25ac556819284e2f57fa9a8298b6bcf76c8ac6d6e9f7e8",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
 }

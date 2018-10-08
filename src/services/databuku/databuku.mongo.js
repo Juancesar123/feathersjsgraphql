@@ -15,7 +15,7 @@ let moduleExports = merge({},
         bsonType: "objectId"
       }
     }
-  },
+  }
   // !end
   // !code: moduleExports // !end
 );

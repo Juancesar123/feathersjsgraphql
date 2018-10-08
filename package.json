@@ -33,6 +33,9 @@
   "dependencies": {
     "@feathers-plus/graphql": "^1.9.0",
     "@feathers-plus/test-utils": "^0.3.3",
+    "@feathersjs/authentication": "^2.1.11",
+    "@feathersjs/authentication-jwt": "^2.0.1",
+    "@feathersjs/authentication-local": "^1.2.1",
     "@feathersjs/configuration": "^2.0.4",
     "@feathersjs/errors": "^3.3.3",
     "@feathersjs/express": "^1.2.7",

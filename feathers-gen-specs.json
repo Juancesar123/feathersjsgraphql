@@ -28,6 +28,17 @@
       "path": "/databuku",
       "isAuthEntity": false,
       "graphql": true
+    },
+    "users": {
+      "name": "users",
+      "nameSingular": "user",
+      "subFolder": "",
+      "fileName": "users",
+      "adapter": "mongoose",
+      "path": "/users",
+      "isAuthEntity": true,
+      "requiresAuth": true,
+      "graphql": true
     }
   },
   "hooks": {},
@@ -44,5 +55,11 @@
     "sqlInterface": null,
     "requiresAuth": false,
     "name": "graphql"
+  },
+  "authentication": {
+    "strategies": [
+      "local"
+    ],
+    "entity": "users"
   }
 }

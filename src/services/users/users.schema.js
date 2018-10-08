@@ -1,18 +1,17 @@
 
-// Define the Feathers schema for service `databuku`. (Can be re-generated.)
+// Define the Feathers schema for service `users`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
 
 // Define the model using JSON-schema
 let schema = {
   // !<DEFAULT> code: schema_header
-  title: 'Databuku',
-  description: 'Databuku database.',
+  title: 'Users',
+  description: 'Users database.',
   // !end
   // !code: schema_definitions // !end
 
   // Required fields.
-  fakeRecords: 6,
   required: [
     // !code: schema_required // !end
   ],
@@ -23,9 +22,6 @@ let schema = {
 
   // Fields in the model.
   properties: {
-    _id:      { type: 'ID' },
-    nama:     { minLength: 8, maxLength: 40, faker: 'name.firstName' },
-    penerbit: { minLength: 2, maxLength: 15, faker: 'name.firstName' },
     // !code: schema_properties // !end
   },
   // !code: schema_more // !end
@@ -36,12 +32,12 @@ let extensions = {
   // GraphQL generation.
   graphql: {
     // !code: graphql_header
-    name: 'Databuku',
+    name: 'User',
     service: {
       sort: { _id: 1 },
     },
     // sql: {
-    //   sqlTable: 'Databuku',
+    //   sqlTable: 'Users',
     //   uniqueKey: '_id',
     //   sqlColumn: {
     //     __authorId__: '__author_id__',

@@ -1,6 +1,6 @@
 
 /* eslint quotes: 0 */
-// Validation definitions for validateSchema hook for service `databuku`. (Can be re-generated.)
+// Validation definitions for validateSchema hook for service `users`. (Can be re-generated.)
 const { validateSchema } = require('feathers-hooks-common');
 const merge = require('lodash.merge');
 const ajv = require('ajv');
@@ -10,14 +10,13 @@ const ajv = require('ajv');
 // !<DEFAULT> code: set_id_type
 // eslint-disable-next-line no-unused-vars
 const ID = 'string';
-const nama = 'string';
 // !end
 
 let base = merge({},
   // !<DEFAULT> code: base
   {
-    title: "Databuku",
-    description: "Databuku database.",
+    title: "Users",
+    description: "Users database.",
     required: [],
     uniqueItemProperties: [],
     properties: {}
